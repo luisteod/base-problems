@@ -1,0 +1,11 @@
+services:
+  base-problems:
+    image: rust:1.49-slim-buster
+    volumes:
+      - .:/rust
+    environment:
+      - RUST_BACKTRACE=1
+    command: /bin/bash
+    working_dir: /rust
+    stdin_open: true
+    tty: true
